@@ -1,0 +1,57 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.smsdemoapp.Activity_sms" >
+
+    <EditText
+        android:id="@+id/etMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/etNumber"
+        android:layout_alignRight="@+id/btnContact"
+        android:layout_below="@+id/etNumber"
+        android:layout_marginTop="94dp"
+        android:ems="10"
+        android:hint="Enter Message Please..."
+        android:inputType="textMultiLine" >
+
+        <requestFocus />
+    </EditText>
+
+    <Button
+        android:id="@+id/btnSendSMS"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="76dp"
+        android:text="Send Message"
+        android:onClick="SendMessage" />
+
+    <Button
+        android:id="@+id/btnContact"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/etNumber"
+        android:layout_alignBottom="@+id/etNumber"
+        android:layout_alignParentRight="true"
+        android:text="Contact"
+        android:onClick="getContact" />
+
+    <EditText
+        android:id="@+id/etNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="58dp"
+        android:layout_toLeftOf="@+id/btnContact"
+        android:ems="10"
+        android:hint="Enter Number Please..."
+        android:inputType="number" />
+
+</RelativeLayout>
